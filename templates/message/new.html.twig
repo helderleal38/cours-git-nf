@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouveau message{% endblock %}
+
+{% block body %}
+		{{ form_start(form, {'attr' : {'class' : 
+    'text-center border border-light p-5 mb-5 z-depth-3'}}) }}
+      <!-- Default form login -->
+
+        <p class="h4 mb-4">Votre message</p>
+
+        <div class="md-form">
+          {{ form_label(form.sender)}} {#afiche le titre du champs expediteur#}   
+          {{ form_widget(form.sender)}}    {#afiche l'input associe a sender#}
+        </div>
+
+        {{ form_errors(form.sender)}}
+        
+         <div class="md-form">
+          {{ form_label(form.receiver)}}    
+          {{ form_widget(form.receiver)}}    
+        </div>
+
+        <div class="md-form">
+          {{ form_label(form.message)}}    
+          {{ form_widget(form.message)}}
+        </div>
+       
+        {{ form_end(form)}}
+{% endblock %}

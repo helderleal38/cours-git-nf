@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste de messages{% endblock %}
+
+{% block body %}
+	
+		Envoye(e) par : {{ message.sender }} <br>
+		Recu par : {{ message.receiver }} <br>
+		Message : {{ message.message }} <br>
+		Date : {{ message.date|date('d-m-Y H:i') }} <br>
+		
+{% endblock %}
